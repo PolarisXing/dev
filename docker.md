@@ -46,6 +46,9 @@ docker network create --subnet=192.168.0.1/24 local_net
 
 docker run -d --name test --network local_net --ip 192.168.0.33 -v workspace:/root/workspace -p 8080:8080 -it sec:1.0 /bin/bash
 
+
+docker save -o sec-1.0.tar sec:1.0
+docker load sec-1.0.tar
 ```
 
 
